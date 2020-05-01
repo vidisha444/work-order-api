@@ -1,0 +1,22 @@
+
+
+
+function register(req, res){
+    console.log('check')
+    let userName = req.body.userName
+    let password = req.body.password
+let query = 'insert into users (username, password) values (?,?)'
+    connectDatabase(query,[userName,password])
+    .then((rows) => {
+        console.log("Rows: ", rows)
+            if (rows.affectedRows > 0) {
+                res.status(200).send({ code: 200, message: 'Registered Successfully' })
+            } else {
+                res.status(400).send({ code: 400, message: "Failed db actionq" })
+            }
+    }).catch((err) => {
+        res.status(500).send({ code: 500, msg: "Can't connect to db" })
+    })
+}
+
+module.exports.register = register
