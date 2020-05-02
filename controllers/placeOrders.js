@@ -5,10 +5,9 @@ function placeOrders( req, res) {
     let title = req.body.title
     let desc = req.body.description
     let userId = req.body.userId
-    let flag = req.body.flag
 
 let query = 'insert into orders (title, description, userid, status) values (?,?,?,?)'
-    connectDatabase(query,[title,desc, userId, flag])
+    connectDatabase(query,[title,desc, userId, 'N'])
     .then((rows) => {
         console.log("Rows: ", rows)
             if (rows.affectedRows > 0) {
