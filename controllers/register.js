@@ -12,7 +12,7 @@ let query = 'insert into users (username, password) values (?,?)'
             if (rows.affectedRows > 0) {
                 res.status(200).send({ code: 200, message: 'Registered Successfully' })
             } else {
-                res.status(400).send({ code: 400, message: "Failed db actionq" })
+                res.status(400).send({ code: 400, message: "Failed db action" })
             }
     }).catch((err) => {
         res.status(500).send({ code: 500, msg: "Can't connect to db" })

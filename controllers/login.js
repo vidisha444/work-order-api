@@ -10,7 +10,7 @@ function login(req, res) {
         .then((rows) => {
             console.log("Rows: ", rows)
             if (!_.isEmpty(rows)) {
-                res.status(200).send({ code: 200, message: 'LogIn Successfully', data: rows[0] })
+                res.status(200).send({ code: 200, message: 'LogIn Successfully', data: rows })
             } else {
                 res.status(400).send({ code: 400, message: "Please contact authorized person" })
             }
