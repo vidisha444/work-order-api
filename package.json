@@ -1,10 +1,22 @@
 {
-  "name": "eventizer",
-  "version": "0.0.0",
+  "name": "work-order-apis",
+  "version": "1.0.0",
+  "description": "node app for Work Order Apis",
   "private": true,
+  "main": "app.js",
   "scripts": {
-    "start": "node app"
+    "start": "node app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
