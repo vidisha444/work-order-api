@@ -4,7 +4,8 @@
   "description": "node app for Work Order Apis",
   "main": "app.js",
   "scripts": {
-  "start": "node app.js"
+  "start": "node app.js",
+  "prebuild-install": "echo prebuild"
 },
   "repository": {
   "type": "git",
