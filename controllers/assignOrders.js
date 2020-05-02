@@ -2,7 +2,7 @@
 function assignOrders(req, res) {
     let empid = req.body.empId
     let id = req.body.id
-let query = 'update orders set empid = ? where id = ? and status = "P" '
+let query = 'update orders set empid = ? where id = ? and status = "N"'
     connectDatabase(query,[empid,id])
     .then((rows) => {
         console.log("Rows: ", rows)
