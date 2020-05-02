@@ -4,9 +4,8 @@ const registerController = require('../controllers/register')
 const loginController = require('../controllers/login')
 
 /* GET home page. */
-
-router.get('/ping', function(req, res, next) {
-  res.send({'Message': test})
+router.get('/ping', (req, res) => {
+  res.status(200).send('checking......')
 })
 
 router.post('/register', function (req, res) {

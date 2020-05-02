@@ -1,22 +1,22 @@
 
 
 
-function login(req, res){
+function login(req, res) {
     console.log('check')
     let userName = req.body.userName
     let password = req.body.password
-let query = 'select username from users where username = ? and password = ?'
-    connectDatabase(query,[userName,password])
-    .then((rows) => {
-        console.log("Rows: ", rows)
+    let query = 'select id, username from users where username = ? and password = ?'
+    connectDatabase(query, [userName, password])
+        .then((rows) => {
+            console.log("Rows: ", rows)
             if (!_.isEmpty(rows)) {
                 res.status(200).send({ code: 200, message: 'LogIn Successfully', data: rows[0] })
             } else {
                 res.status(400).send({ code: 400, message: "Failed db action" })
             }
-    }).catch((err) => {
-        res.status(500).send({ code: 500, msg: "Can't connect to db" })
-    })
+        }).catch((err) => {
+            res.status(500).send({ code: 500, msg: "Can't connect to db" })
+        })
 }
 
 module.exports.login = login
