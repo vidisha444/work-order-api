@@ -1,11 +1,17 @@
 {
   "name": "work-order-apis",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.16.x"
+  },
   "description": "node app for Work Order Apis",
   "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "webpack",
+    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
+    "heroku-postbuild": "ng build --prod" 
   },
   "repository": {
     "type": "git",
