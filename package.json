@@ -1,7 +1,7 @@
 {
-  "name": "coolnodeapp",
+  "name": "work-order-apis",
   "version": "1.0.0",
-  "description": "node app ",
+  "description": "node app for Work Order Apis",
   "main": "app.js",
   "scripts": {
   "start": "node app.js"
@@ -15,5 +15,20 @@
   "bugs": {
   "url": ""
 },
-  "homepage": ""
+  "homepage": "",
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "mongodb": "^3.5.3",
+    "mongoose": "^5.9.7",
+    "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
+    "node-rfc": "^1.0.3",
+    "pug": "2.0.0-beta11",
+    "q": "^1.5.1",
+    "underscore": "^1.9.2",
+    "validator": "^13.0.0"
+  }
 }
