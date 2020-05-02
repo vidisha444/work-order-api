@@ -7,6 +7,9 @@ const getOrdersController = require('../controllers/getOrders')
 const placeOrderController = require('../controllers/placeOrders')
 const assignOrdersController = require('../controllers/assignOrders')
 const assignRoleController = require('../controllers/assignRole')
+const myWorkListController = require('../controllers/myWorkList')
+const finishOrderController = require('../controllers/finishOrder')
+const getAllEmpController = require('../controllers/getAllEmployee')
 
 /* GET home page. */
 router.get('/ping', (req, res) => {
@@ -39,4 +42,15 @@ router.post('/assignRole', function (req, res) {
   assignRoleController.assignRole(req, res)
 })
 
+router.post('/myWorkList', function (req, res) {
+  myWorkListController.myWorkList(req, res)
+})
+
+router.post('/finishOrder', function (req, res) {
+  finishOrderController.finishOrder(req, res)
+})
+
+router.get('/getAllEmp', function (req, res) {
+  getAllEmpController.getAllEmployee(req, res)
+})
 module.exports = router;

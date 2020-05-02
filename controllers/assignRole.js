@@ -8,7 +8,7 @@ function assignRole(req, res) {
     .then((rows) => {
         console.log("Rows: ", rows)
             if (rows.affectedRows > 0) {
-                res.status(200).send({ code: 200, message: 'Registered Successfully' })
+                res.status(200).send({ code: 200, message: 'Role assigned successfully' })
             } else {
                 res.status(400).send({ code: 400, message: "Failed db action" })
             }
