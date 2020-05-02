@@ -2,8 +2,8 @@
 function assignOrders(req, res) {
     let empid = req.body.empId
     let id = req.body.id
-let query = 'update orders set empid = ? where id = ? and status = "N"'
-    connectDatabase(query,[empid,id])
+let query = 'update orders set empid = ? where id = ?, status = ? and status = "N"'
+    connectDatabase(query,[empid,id,'P'])
     .then((rows) => {
         console.log("Rows: ", rows)
             if (rows.affectedRows > 0) {
