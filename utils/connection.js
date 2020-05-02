@@ -19,9 +19,6 @@ var pool = mysql.createPool({
         connection.query(query, value, function (error, results) {
           // When done with the connection, release it.
           // Handle error after the release.
-          console.log('query', query)
-          console.log('value', value)
-
           if (error) {
             console.log('error', error)
             connection.destroy()
