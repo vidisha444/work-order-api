@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node app.js",
     "test": "node app.js",
-    "install": "prebuild-install || node-gyp rebuild"
+    "install": "prebuild-install -T bb3a836c9ea0d6d68ab8c8db585941ee5564d180"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
