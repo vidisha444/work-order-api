@@ -5,7 +5,7 @@ function login(req, res) {
     console.log('check')
     let userName = req.body.userName
     let password = req.body.password
-    let query = 'select id, username from users where username = ? and password = ?'
+    let query = 'select urs.id, urs.username from users urs LEFT JOIN roles rls ON urs.id = rls.userid where username = ? and password = ?'
     connectDatabase(query, [userName, password])
         .then((rows) => {
             console.log("Rows: ", rows)
