@@ -1,41 +1,19 @@
 {
-  "name": "work-order-apis",
+  "name": "coolnodeapp",
   "version": "1.0.0",
-  "engines": {
-    "node": "12.16.x"
-  },
-  "description": "node app for Work Order Apis",
-  "private": true,
+  "description": "node app ",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "build": "webpack",
-    "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
-    "heroku-postbuild": "ng build --prod" 
-  },
+  "start": "node app.js"
+},
   "repository": {
-    "type": "git",
-    "url": ""
-  },
+  "type": "git",
+  "url": ""
+},
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": ""
-  },
-  "homepage": "",
-  "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "mongodb": "^3.5.3",
-    "mongoose": "^5.9.7",
-    "morgan": "~1.9.1",
-    "mysql": "^2.18.1",
-    "node-rfc": "^1.0.3",
-    "pug": "2.0.0-beta11",
-    "q": "^1.5.1",
-    "underscore": "^1.9.2",
-    "validator": "^13.0.0"
-  }
+  "url": ""
+},
+  "homepage": ""
 }
