@@ -8,11 +8,12 @@ var pool = mysql.createPool({
     timezone: 'UTC+0',
     multipleStatements: true
   })
-  
+  console.log('check',config.db)
   function connectDatabase (query, value) {
     let deferred = q.defer()
     pool.getConnection(function (err, connection) {
       if (err) {
+        console.log('error====>', err)
         return deferred.reject({ message: "Can't connect to database." })
       } else {
         // Use the connection
