@@ -3,10 +3,10 @@
         "port": 5000
     },
     "db": {
-        "sql_db": "sql12338777",
+        "sql_db": "sql12339678",
         "host": "sql12.freesqldatabase.com",
-        "user": "sql12338777",
-        "password": "xLu25RrUL1",
+        "user": "sql12339678",
+        "password": "cHmGKtStRF",
         "isProd": true
       }
 }

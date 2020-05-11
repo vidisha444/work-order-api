@@ -3,8 +3,8 @@ function assignRole(req, res) {
     console.log('check')
     let userId = req.body.userId
     let role = req.body.role
-    let query = 'insert into roles (userid, role) values (?,?)'
-    connectDatabase(query,[userId,role])
+    let query = 'update roles set role = ? where userid = ?'
+    connectDatabase(query,[role,userId])
     .then((rows) => {
         console.log("Rows: ", rows)
             if (rows.affectedRows > 0) {
